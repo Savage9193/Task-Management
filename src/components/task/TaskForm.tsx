@@ -56,7 +56,7 @@ export const TaskForm = ({ initialValues, onSubmit, submitLabel = "Save Task" }:
           <select
             value={values.priority}
             onChange={(event) => setValues((prev) => ({ ...prev, priority: event.target.value as Priority }))}
-            className="rounded-xl border border-slate-300/90 bg-white px-3.5 py-2.5 text-sm text-slate-800 shadow-sm outline-none ring-indigo-500 transition focus:border-indigo-400 focus:ring-2 dark:border-slate-700 dark:bg-slate-900 dark:text-slate-100"
+            className="select-clean rounded-xl border border-slate-300/90 bg-white px-3.5 py-2.5 text-sm text-slate-800 shadow-sm outline-none ring-indigo-500 transition focus:border-indigo-400 focus:ring-2 dark:border-slate-700 dark:bg-slate-900 dark:text-slate-100"
           >
             {PRIORITY_OPTIONS.map((priority) => (
               <option key={priority} value={priority}>

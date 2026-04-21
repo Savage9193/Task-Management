@@ -1,5 +1,6 @@
 import { memo } from "react";
 import { FaEdit, FaTrash } from "react-icons/fa";
+import { FiCalendar } from "react-icons/fi";
 import { Task } from "../../types/task";
 import { formatDate, isOverdue } from "../../utils/helpers";
 import { Button } from "../common/Button";
@@ -37,18 +38,21 @@ export const TaskCard = memo(({ task, view, onEdit, onDelete, onToggle }: TaskCa
         {task.description}
       </p>
       <div className="flex items-center gap-3 text-xs font-medium text-slate-500 dark:text-slate-400">
-        <span>Due: {formatDate(task.dueDate)}</span>
+        <span className="inline-flex items-center gap-1.5 rounded-full bg-slate-100 px-2.5 py-1 dark:bg-slate-800/80">
+          <FiCalendar size={12} />
+          {formatDate(task.dueDate)}
+        </span>
         {isOverdue(task) ? <span className="font-semibold text-rose-500">Overdue</span> : null}
       </div>
     </div>
     <div className="flex items-center gap-2 sm:self-start">
-      <Button variant={task.completed ? "secondary" : "primary"} onClick={() => onToggle(task.id)}>
+      <Button variant={task.completed ? "secondary" : "primary"} className="min-w-28" onClick={() => onToggle(task.id)}>
         {task.completed ? "Completed" : "Pending"}
       </Button>
-      <Button variant="ghost" aria-label="Edit task" onClick={() => onEdit(task)}>
+      <Button variant="ghost" className="!px-3" aria-label="Edit task" onClick={() => onEdit(task)}>
         <FaEdit />
       </Button>
-      <Button variant="ghost" aria-label="Delete task" onClick={() => onDelete(task)}>
+      <Button variant="ghost" className="!px-3" aria-label="Delete task" onClick={() => onDelete(task)}>
         <FaTrash className="text-rose-500" />
       </Button>
     </div>
