@@ -1,7 +1,7 @@
 {
   "name": "task-management",
   "version": "1.0.0",
-  "description": "Production-ready Task Management Dashboard",
+  "description": "Task Management Dashboard",
   "private": true,
   "type": "module",
   "scripts": {

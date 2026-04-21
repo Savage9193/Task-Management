@@ -1,6 +1,6 @@
 # Task Management Dashboard
 
-A production-ready Task Management Dashboard built with React, TypeScript, Tailwind CSS, Zustand, and Framer Motion.
+A Task Management Dashboard built with React, TypeScript, Tailwind CSS, Zustand, and Framer Motion.
 
 ## Features
 - Create tasks with title, description, priority, and due date validation
