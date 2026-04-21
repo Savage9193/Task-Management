@@ -60,7 +60,7 @@ src/
 - Task card/list view: `./screenshots/views.png`
 
 ## Live Demo
-- Add your Vercel deployment link here: `https://your-vercel-url.vercel.app`
+- Add your Vercel deployment link here: `https://task-management-v1-pied.vercel.app/`
 
 ## Vercel Deployment
 1. Push this project to GitHub.
